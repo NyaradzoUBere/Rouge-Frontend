@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from './components/Card'
+import Banner from './components/Banner'
 import './App.css';
 
 const baseUrl = "http://localhost:3000"
@@ -27,7 +28,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>Hello World</h1>
+        <Banner />
         {this.showProducts()}
         <Card />
       </div>
