@@ -2,6 +2,10 @@ import React from 'react';
 import Card from './components/Card'
 import Banner from './components/Banner'
 import './App.css';
+// let r
+// let g
+// let b
+// let hsp
 
 const baseUrl = "http://localhost:3000"
 const productsUrl = `${baseUrl}/products`
@@ -24,7 +28,55 @@ class App extends React.Component {
     })
   }
 
-  // console.log(this.state.products)
+  // productColors = () => {
+  //   return this.state.products.map(product => {
+  //     return (product.product_colors.map(color =>{
+  //       // console.log(color)
+  //       const newString = (color.substr(14,12))
+  //       const productColor = newString.substr(1,7)
+  //       const rawProductColor = productColor.substr(1,productColor.length);
+  //       console.log(productColor)
+  //     }))
+  //   })
+  // }
+
+  productColors = () => {
+    return this.state.products.map(product => {
+      return (product.product_colors.map(color =>{
+        // console.log(color)
+        const newString = (color.substr(14,12))
+        let productColor = newString.substr(1,7)
+        productColor = +("0x" + productColor.slice(1).replace( 
+          productColor.length < 5 && /./g, '$&$&'));
+
+          // let r, g, b, hsp;
+          let r
+          let g
+          let b
+          let hsp
+          r = productColor >> 16;
+          g = productColor >> 8 & 255;
+          b = productColor & 255;
+
+          hsp = Math.sqrt(
+            0.299 * (r * r) +
+            0.587 * (g * g) +
+            0.114 * (b * b)
+            );
+        
+            // Using the HSP value, determine whether the color is light or dark
+            if (hsp>127.5) {
+        
+                console.log('light');
+            } 
+            else {
+        
+                console.log('dark');
+            }
+      }))
+    })
+  }
+
   render() {
     return (
       <div className="App">
@@ -32,6 +84,7 @@ class App extends React.Component {
         <ul className = "product-list">
           {this.showProducts()}
         </ul>
+          {this.productColors()}
       </div>
     );
   }
