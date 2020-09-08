@@ -29,8 +29,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <Banner />
-        {this.showProducts()}
-        <Card />
+        <ul className = "product-list">
+          {this.showProducts()}
+        </ul>
       </div>
     );
   }

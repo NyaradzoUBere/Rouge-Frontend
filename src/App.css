@@ -23,7 +23,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
+
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -68,15 +68,19 @@ table {
   width: 200px;
   height: 200px;
   float: left;
-  /* margin: 20px 20px; */
-  padding: 10px 10px;
-  /* display: inline; */
-  border: 3px solid black
 }
 
 .product-card {
   margin: 20px 20px;
   padding: 10px 10px;
+  box-shadow: 0 6px 15px 6px rgb(211, 211, 211);
+}
+
+.product-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  list-style-type: none;
 }
 
 /* .product-card {
