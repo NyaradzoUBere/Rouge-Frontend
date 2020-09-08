@@ -64,6 +64,9 @@ table {
   padding-top: 80px;
 }
 
+.button-list {
+  list-style-type: none;
+}
 .product-image {
   width: 200px;
   height: 200px;

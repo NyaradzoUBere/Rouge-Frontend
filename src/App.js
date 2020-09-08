@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from './components/Card'
 import Banner from './components/Banner'
+import Button from './components/Button'
 import './App.css';
 // let r
 // let g
@@ -81,6 +82,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <Banner />
+        <div className = "button">
+          <Button />
+        </div>
         <ul className = "product-list">
           {this.showProducts()}
         </ul>
