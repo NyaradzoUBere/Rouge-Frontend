@@ -1,12 +1,8 @@
 import React from 'react';
 import Card from './components/Card'
 import Banner from './components/Banner'
-import Button from './components/Button'
+// import Button from './components/Button'
 import './App.css';
-// let r
-// let g
-// let b
-// let hsp
 
 const baseUrl = "http://localhost:3000"
 const productsUrl = `${baseUrl}/products`
@@ -67,13 +63,13 @@ class App extends React.Component {
         
             // Using the HSP value, determine whether the color is light or dark
             if (hsp>127.5) {
-        
                 console.log('light');
             } 
             else {
-        
                 console.log('dark');
             }
+            // this.setState({product_colors: hsp})
+            // <Button hsp = {this.state.product.product_colors} />
       }))
     })
   }
@@ -83,12 +79,12 @@ class App extends React.Component {
       <div className="App">
         <Banner />
         <div className = "button">
-          <Button />
+          {/* <Button /> */}
         </div>
         <ul className = "product-list">
           {this.showProducts()}
         </ul>
-          {this.productColors()}
+        {this.productColors()}
       </div>
     );
   }
