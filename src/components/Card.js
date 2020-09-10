@@ -11,6 +11,14 @@ export default class Card extends React.Component {
         this.setState({ modal: newModal })
     }
 
+    // className = () => {
+    //     if (this.props.hasLight) {
+    //         li.className = "light-card"
+    //     } else if (this.props.hasDark) {
+    //         li.className = "dark-card"
+    //     }
+    // }
+
     render() {
         return(
             <>
@@ -18,7 +26,7 @@ export default class Card extends React.Component {
                     <img className = "product-image" src = {this.props.image} />
                     <h2>{this.props.name}</h2>
                 </li>
-                {this.state.modal ? <Modal product={this.props} handleClick={this.handleClick} image = {this.props.image} name = {this.props.name} showPrice = {this.props.showPrice}/> : null}
+                {this.state.modal ? <Modal product={this.props} handleClick={this.handleClick} image = {this.props.image} name = {this.props.name} showPrice = {this.props.showPrice} brand = {this.props.brand}/> : null}
             </>
         )
     }

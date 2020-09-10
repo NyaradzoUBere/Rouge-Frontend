@@ -17,7 +17,7 @@ class App extends React.Component {
   state = {
     products: [],
     lightProducts: false,
-    darkProducts: false
+    darkProducts: false,
   }
 
   componentDidMount() {
@@ -29,21 +29,21 @@ class App extends React.Component {
 
   showProducts = () => {
     return this.state.products.map(product => {
-      return <Card image= {product.image_link} name = {product.name} description = {product.description} showPrice = {this.showPrice} price = {product.price}/>
+      return <Card image= {product.image_link} brand = {product.brand} name = {product.name} description = {product.description} showPrice = {this.showPrice} price = {product.price}/>
     })
   }
 
   showLightProducts = () => {
     return this.state.products.map(product => {
         if (product.hasLight) {
-          return <Card image= {product.image_link} name = {product.name} description = {product.description} showPrice = {this.showPrice} price = {product.price}/>
+          return <Card image= {product.image_link} brand = {product.brand} name = {product.name} description = {product.description} showPrice = {this.showPrice} price = {product.price}/>
         }
       })
   }
   showDarkProducts = () => {
     return this.state.products.map(product => {
         if (product.hasDark) {
-          return <Card image= {product.image_link} name = {product.name} description = {product.description} showPrice = {this.showPrice} price = {product.price}/>
+          return <Card image= {product.image_link} brand = {product.brand} name = {product.name} description = {product.description} showPrice = {this.showPrice} price = {product.price}/>
         }
       })
   }
