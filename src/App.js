@@ -15,7 +15,9 @@ let shade
 
 class App extends React.Component {
   state = {
-    products: []
+    products: [],
+    lightProducts: false,
+    darkProducts: false
   }
 
   componentDidMount() {
@@ -26,11 +28,49 @@ class App extends React.Component {
   }
 
   showProducts = () => {
+    // return <Card image= {product.image_link} name = {product.name} description = {product.description} showPrice = {this.showPrice} price = {product.price}/>
     return this.state.products.map(product => {
+      // console.log("showProducts", product)
       return <Card image= {product.image_link} name = {product.name} description = {product.description} showPrice = {this.showPrice} price = {product.price}/>
     })
   }
+  // showProducts = () => {
+  //   return this.state.products.map(product => {
+  //     return <Card image= {product.image_link} name = {product.name} description = {product.description} showPrice = {this.showPrice} price = {product.price}/>
+  //   })
+  // }
 
+  // showLightProducts = () => {
+  //   return this.state.products.map(product => {
+  //     if (product.hasLight) {
+  //       return <Button image= {product.image_link} name = {product.name} description = {product.description} showPrice = {this.showPrice} price = {product.price}/>
+  //     }
+  //   })
+  // }
+  showLightProducts = () => {
+    return this.state.products.map(product => {
+        if (product.hasLight) {
+          // console.log("clicked", product)
+          return <Card image= {product.image_link} name = {product.name} description = {product.description} showPrice = {this.showPrice} price = {product.price}/>
+        }
+      })
+  }
+  showDarkProducts = () => {
+    return this.state.products.map(product => {
+        if (product.hasDark) {
+          // console.log("clicked", product)
+          return <Card image= {product.image_link} name = {product.name} description = {product.description} showPrice = {this.showPrice} price = {product.price}/>
+        }
+      })
+  }
+
+  // showDarkProducts = () => {
+  //   return this.state.products.map(product => {
+  //     if (product.hasDark) {
+  //       return <Card image= {product.image_link} name = {product.name} description = {product.description} showPrice = {this.showPrice} price = {product.price}/>
+  //     }
+  //   })
+  // }
 
   productColors = () => {
     let products = this.state.products.map(product => {
@@ -79,15 +119,43 @@ class App extends React.Component {
   //   this.setState({products})
   // }
 
+  lightColors = () => {
+    this.setState({...this.state, lightProducts: true, darkProducts: false})
+  }
+  darkColors = () => {
+    this.setState({...this.state, darkProducts: true, lightProducts: false})
+  }
+
+  // lightColors = () => {
+  //   let hasLight = this.state.products.map(product => product.hasLight)
+  //   // product = this.state.products.map(product => product)
+  //   hasLight ? this.showLightProducts() : this.showProducts()
+  //   // this.state.products.map(product => product.hasLight ? console.log("yes") : console.log("no"))
+  //   // this.state.products.map(product => product.hasLight ? this.showLightProducts(product) : this.showProducts(product))
+  //   // console.log("clicked")
+  // }
+
+  lightOrDark = () => {
+    if (this.state.lightProducts) {
+      return this.showLightProducts()
+    } else if (this.state.darkProducts) {
+      return this.showDarkProducts()
+    } else {
+      return this.showProducts()
+    }
+  }
+
   render() {
     return (
       <div className="App">
         <Banner />
         <div className = "button">
-          {/* <Button /> */}
+          <button onClick = {this.lightColors}>Light</button>
+          <button onClick = {this.darkColors}>Dark</button>
         </div>
         <ul className = "product-list">
-          {this.showProducts()}
+          {/* {this.state.lightProducts ? this.showLightProducts() : this.showProducts()} */}
+          {this.lightOrDark()}
         </ul>
       </div>
     );
