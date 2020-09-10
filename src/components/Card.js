@@ -6,7 +6,7 @@ export default class Card extends React.Component {
         modal: false
     }
     
-    handleClick = event => {
+    handleClick = (event) => {
         const newModal = !this.state.modal
         this.setState({ modal: newModal })
     }

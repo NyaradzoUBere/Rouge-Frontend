@@ -8,6 +8,7 @@ export default function Modal(props) {
             <h2 className = "product-name">{props.name}</h2>
             <p className = "product-description">{props.product.description}</p>
             <p className = "price">${props.product.price}</p>
+            {/* {props.product.showPrice} */}
         </div>
         </div>
     )
