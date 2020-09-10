@@ -49,6 +49,11 @@ table {
 
 /* END OF MEYERS RESET */
 
+/* Light Colors: */
+body {
+  font-family: sans-serif;
+}
+
 .banner {
   background-image: url("../src/rouge_banner.jpg");
   background-size: cover;
@@ -143,4 +148,7 @@ table {
   height: 200px;
 }
 
+.price {
+  margin-top: 10px;
+}
 

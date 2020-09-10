@@ -21,7 +21,7 @@ class App extends React.Component {
 
   showProducts = () => {
     return this.state.products.map(product => {
-      return <Card image= {product.image_link} name = {product.name} description = {product.description}/>
+      return <Card image= {product.image_link} name = {product.name} description = {product.description} showPrice = {this.showPrice} price = {product.price}/>
     })
   }
 
@@ -35,6 +35,14 @@ class App extends React.Component {
   //       console.log(productColor)
   //     }))
   //   })
+  // }
+
+  // showPrice = (product) => {
+  //   if (product.priceSign) {
+  //       <p className = "price">{product.priceSign}{product.price}</p>
+  //   } else {
+  //       <p className = "price">${product.price}</p>
+  //   }
   // }
 
   productColors = () => {
