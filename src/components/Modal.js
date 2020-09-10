@@ -3,10 +3,10 @@ import React from 'react'
 export default function Modal(props) {
   return (
     <div className="modal" onClick={props.handleClick}>
-      <div className="full-details">
-        <img src={props.image} alt={props.name} />
-        <h2>{props.name}</h2>
-        <p>{props.product.description}</p>
+      <div className="product-details">
+        <img src={props.image} alt={props.name} id= "modal-image" />
+        <h2 className = "product-name">{props.name}</h2>
+        <p className = "product-description">{props.product.description}</p>
         {/* <p>{game.description_preview}</p>
         <p>Players: {game.min_players}-{game.max_players}</p>
         <p>Ages {game.min_age} and up.</p>
