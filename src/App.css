@@ -85,7 +85,6 @@ body {
   width: 200px;
   height: 300px;
   text-align: center;
-  /* font-weight: bold; */
   font-family: sans-serif;
   font-size: 18px;
   letter-spacing: 2px;
@@ -118,7 +117,6 @@ body {
   margin-bottom: 50px;
   margin-left: 200px;
   margin-right: 200px;
-  /* padding: 15px 15px; */
 }
 
 .product-details {
@@ -130,7 +128,6 @@ body {
 }
 
 .product-description {
-  /* width: 400px; */
   text-align: center;
   word-wrap: break-word;
   font-family: sans-serif;
