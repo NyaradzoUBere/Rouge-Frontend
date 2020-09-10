@@ -21,7 +21,7 @@ class App extends React.Component {
 
   showProducts = () => {
     return this.state.products.map(product => {
-      return <Card image= {product.image_link} name = {product.name}/>
+      return <Card image= {product.image_link} name = {product.name} description = {product.description}/>
     })
   }
 
