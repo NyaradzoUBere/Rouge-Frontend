@@ -151,3 +151,26 @@ body {
   margin-top: 10px;
 }
 
+.button {
+  margin: 10px 10px;
+  text-align: center;
+}
+
+button {
+  font-size: 20px;
+  margin: 10px 10px;
+  padding: 5px 5px;
+  letter-spacing: 3px;
+  background-color: rgb(172, 67, 128, .8);
+  color: white;
+  border-radius: 5px;
+  font-family: sans-serif;
+  border-color: white;
+}
+
+button:hover {
+  background-color: white;
+  color: rgba(189, 99, 119, 0.657);
+  font-weight: bold;
+}
+
