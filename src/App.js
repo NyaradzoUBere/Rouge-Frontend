@@ -27,35 +27,6 @@ class App extends React.Component {
       .then(this.productColors)
   }
 
-  showProducts = () => {
-    return this.state.products.map(product => {
-      return <Card product = {product} addToLooks = {this.addToLooks}/>
-    })
-  }
-
-  showLooks = () => this.state.looks.map(product => <Card key = {product.id} product={product}/>)
-
-  addToLooks = (product) => {
-    this.setState({
-      looks: [...this.state.looks, product]
-    })
-  }
-
-  showLightProducts = () => {
-    return this.state.products.map(product => {
-        if (product.hasLight) {
-          return <Card product = {product} addToLooks = {this.addToLooks}/>
-        }
-      })
-  }
-  showDarkProducts = () => {
-    return this.state.products.map(product => {
-        if (product.hasDark) {
-          return <Card product = {product} addToLooks = {this.addToLooks}/>
-        }
-      })
-  }
-
   productColors = () => {
     let products = this.state.products.map(product => {
       let hasDark = false
@@ -86,6 +57,35 @@ class App extends React.Component {
       return {...product, hasLight, hasDark}
     })
     this.setState({products})
+  }
+
+  showProducts = () => {
+    return this.state.products.map(product => {
+      return <Card product = {product} addToLooks = {this.addToLooks}/>
+    })
+  }
+
+  showLooks = () => this.state.looks.map(product => <Card key = {product.id} product={product}/>)
+
+  addToLooks = (product) => {
+    this.setState({
+      looks: [...this.state.looks, product]
+    })
+  }
+
+  showLightProducts = () => {
+    return this.state.products.map(product => {
+        if (product.hasLight) {
+          return <Card product = {product} addToLooks = {this.addToLooks}/>
+        }
+      })
+  }
+  showDarkProducts = () => {
+    return this.state.products.map(product => {
+        if (product.hasDark) {
+          return <Card product = {product} addToLooks = {this.addToLooks}/>
+        }
+      })
   }
 
   lightColors = () => {
