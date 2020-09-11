@@ -53,18 +53,17 @@ HTML5 / CSS3
   }
 ```
 ## Rouge Features
-* Input and track expenses
-* Visualize expenses through a colored donut chart
-* Provide finance and budgetting resources
+* Select Daytime or Nightime makeup Products
+* Receive details of the products selected such as name, brand, description, etc.
+* Add your favorite products to your makeup look
+* Purchase the product by following the product links provided
 
 
 To-Do List:
-* Add expense breakdown option: labeling expense type
+<!-- * Break down products by type to allow for an enhanced user experience -->
 
 ## Status
 Completed.
-
-This app is built to carry out the CRUD framework
 
 ## Why Rouge?
 I created this app because of my personal affinity for finance. Being a recent graduate of both finance and accounting, I constantly think about the ways I am breaking out my daily, weekly, and monthly income. This app serves as a beginner's resource for those just now thinking about how finance plays into their lives and ways to improve financial habits.
