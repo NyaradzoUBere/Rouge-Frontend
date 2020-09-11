@@ -1,7 +1,7 @@
 import React from 'react'
 import Modal from '../components/Modal'
 
-export default class Card extends React.Component {
+export default class LookCard extends React.Component {
     state = {
         modal: false
     }

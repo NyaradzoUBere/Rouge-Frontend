@@ -84,14 +84,14 @@ class App extends React.Component {
   showLightProducts = () => {
     return this.state.products.map(product => {
         if (product.hasLight) {
-          return <Card product = {product} addToLooks = {this.addToLooks}/>
+          return <Card product = {product} clickLooks = {this.addToLooks}/>
         }
       })
   }
   showDarkProducts = () => {
     return this.state.products.map(product => {
         if (product.hasDark) {
-          return <Card product = {product} addToLooks = {this.addToLooks}/>
+          return <Card product = {product} clickLooks = {this.addToLooks}/>
         }
       })
   }
