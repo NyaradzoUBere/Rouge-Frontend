@@ -91,11 +91,33 @@ body {
   font-size: 18px;
   letter-spacing: 2px;
   background-color: white;
+  align-items: center;
+  overflow: scroll;
+
 }
 
 .product-card:hover {
   cursor: pointer;
   transform: scale(1.2)
+}
+
+.look-card {
+  margin: 20px 20px;
+  padding: 10px 10px;
+  box-shadow: 0 6px 15px 6px rgba(82, 27, 39, 0.657);
+  width: 200px;
+  height: 300px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  background-color: white;
+  overflow: scroll;
+}
+
+.look-card:hover {
+  cursor: pointer;
+  transform: scale(1.1)
 }
 
 .product-list {
@@ -120,6 +142,12 @@ body {
   margin-bottom: 50px;
   margin-left: 200px;
   margin-right: 200px;
+}
+
+h2.product-brand {
+  font-size: 50px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
 }
 
 .product-details {
@@ -169,6 +197,10 @@ button {
   border-color: white;
 }
 
+button.look-button {
+  font-size: 16px;
+}
+
 button:hover {
   background-color: white;
   color: rgba(189, 99, 119, 0.657);
@@ -193,6 +225,7 @@ button:hover {
   color: rgba(189, 99, 119, 0.657);
   font-weight: bold;
   margin: 10px 10px;
+  font-size: 20px;
 }
 
 .link:hover {
