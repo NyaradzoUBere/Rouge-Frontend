@@ -117,6 +117,7 @@ class App extends React.Component {
           {this.lightOrDark()}
         </ul>
         <div>
+          <h1 className = "looks-title">Your Look</h1>
           <ul className = "looks-list">
             {this.showLooks()}
           </ul>
