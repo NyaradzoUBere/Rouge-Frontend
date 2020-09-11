@@ -15,8 +15,9 @@ let shade
 class App extends React.Component {
   state = {
     products: [],
+    looks: [],
     lightProducts: false,
-    darkProducts: false,
+    darkProducts: false
   }
 
   componentDidMount() {
@@ -28,21 +29,29 @@ class App extends React.Component {
 
   showProducts = () => {
     return this.state.products.map(product => {
-      return <Card image= {product.image_link} brand = {product.brand} name = {product.name} description = {product.description} showPrice = {this.showPrice} price = {product.price}/>
+      return <Card image= {product.image_link} brand = {product.brand} name = {product.name} description = {product.description} showPrice = {this.showPrice} price = {product.price} product = {product} addToLooks = {this.addToLooks}/>
+    })
+  }
+
+  showLooks = () => this.state.looks.map(product => <Card key = {product.id} product={product}/>)
+
+  addToLooks = (product) => {
+    this.setState({
+      looks: [...this.state.looks, product]
     })
   }
 
   showLightProducts = () => {
     return this.state.products.map(product => {
         if (product.hasLight) {
-          return <Card image= {product.image_link} brand = {product.brand} name = {product.name} description = {product.description} showPrice = {this.showPrice} price = {product.price}/>
+          return <Card image= {product.image_link} brand = {product.brand} name = {product.name} description = {product.description} showPrice = {this.showPrice} price = {product.price} showLooks = {this.showLooks}/>
         }
       })
   }
   showDarkProducts = () => {
     return this.state.products.map(product => {
         if (product.hasDark) {
-          return <Card image= {product.image_link} brand = {product.brand} name = {product.name} description = {product.description} showPrice = {this.showPrice} price = {product.price}/>
+          return <Card image= {product.image_link} brand = {product.brand} name = {product.name} description = {product.description} showPrice = {this.showPrice} price = {product.price} showLooks = {this.showLooks}/>
         }
       })
   }
@@ -107,6 +116,11 @@ class App extends React.Component {
         <ul className = "product-list">
           {this.lightOrDark()}
         </ul>
+        <div>
+          <ul className = "looks-list">
+            {this.showLooks()}
+          </ul>
+        </div>
       </div>
     );
   }
