@@ -6,7 +6,7 @@ export default class LookCard extends React.Component {
         modal: false
     }
     
-    handleClick = (event) => {
+    handleClick = () => {
         const newModal = !this.state.modal
         this.setState({ modal: newModal })
     }

@@ -1,6 +1,6 @@
 import React from 'react';
-import Card from './components/Card'
 import Banner from './components/Banner'
+import Card from './components/Card'
 import LookCard from './components/LookCard'
 import './App.css';
 
@@ -38,22 +38,22 @@ class App extends React.Component {
         productColor = +("0x" + productColor.slice(1).replace( 
           productColor.length < 5 && /./g, '$&$&'));
 
-          r = productColor >> 16;
-          g = productColor >> 8 & 255;
-          b = productColor & 255;
+        r = productColor >> 16;
+        g = productColor >> 8 & 255;
+        b = productColor & 255;
 
-          hsp = Math.sqrt(
-            0.299 * (r * r) +
-            0.587 * (g * g) +
-            0.114 * (b * b)
-            );
-        
-            if (hsp > 127.5) {
-              hasLight = true;
-            } 
-            else {
-              hasDark = true
-            }
+        hsp = Math.sqrt(
+          0.299 * (r * r) +
+          0.587 * (g * g) +
+          0.114 * (b * b)
+        );
+      
+        if (hsp > 127.5) {
+          hasLight = true;
+        } 
+        else {
+          hasDark = true
+        }
       })
       return {...product, hasLight, hasDark}
     })
@@ -66,7 +66,11 @@ class App extends React.Component {
     })
   }
 
-  showLooks = () => this.state.looks.map(product => <LookCard key = {product.id} product={product} clickLooks = {this.removeFromLooks}/>)
+  showLooks = () => {
+    return this.state.looks.map(product => {
+    return <LookCard key = {product.id} product={product} clickLooks = {this.removeFromLooks}/>
+    })
+  }
 
   addToLooks = (product) => {
     if (!this.state.looks.includes(product)) {

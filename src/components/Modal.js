@@ -1,9 +1,11 @@
 import React from 'react'
 
 export default function Modal(props) {
+
     const goToProduct = () => {
         window.open(`${props.product.product_link}`, "_blank")
     }
+    
     return (
         <div className="modal" onClick={props.handleClick}>
         <div className="product-details">

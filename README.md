@@ -1,4 +1,4 @@
-# Rouge-WebApp-Frontend
+# Rouge-Frontend
 
 
 ## Table of Contents
@@ -66,7 +66,7 @@ To-Do List:
 Completed.
 
 ## Why Rouge?
-I created this app because of my personal affinity for finance. Being a recent graduate of both finance and accounting, I constantly think about the ways I am breaking out my daily, weekly, and monthly income. This app serves as a beginner's resource for those just now thinking about how finance plays into their lives and ways to improve financial habits.
+I chose to create this app as a fun, lighthearted way to practice my React knowledge. I live off the idea that it's a lot more fun to learn something when it is directly tied to your interests. I have appreciated makeup for many years now and I wanted to make an app that I know I would use as a consumer myself.
 
 ## Contact
 Created by [Nyaradzo Bere](http://www.linkedin.com/in/nyaradzo-bere)
