@@ -60,7 +60,7 @@ HTML5 / CSS3
 
 
 To-Do List:
-<!-- * Break down products by type to allow for an enhanced user experience -->
+* Break down products by type to allow for an enhanced user experience
 
 ## Status
 Completed.
