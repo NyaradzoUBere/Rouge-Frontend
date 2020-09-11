@@ -18,7 +18,7 @@ export default class LookCard extends React.Component {
     render() {
         return(
             <>
-                <li className = "product-card">
+                <li className = "look-card">
                     <img className = "product-image" src = {this.props.product.image_link} onClick = {this.handleClick}/>
                     <h2>{this.props.product.name}</h2>
                     <button onClick = {this.handleLooksClick}>Remove From Look</button>
