@@ -24,7 +24,7 @@ export default class Card extends React.Component {
                     <h2>{this.props.product.name}</h2>
                     <button onClick = {this.handleLooksClick}>Add To Look</button>
                 </li>
-                {this.state.modal ? <Modal product={this.props} handleClick={this.handleClick} image = {this.props.image} name = {this.props.name} showPrice = {this.props.showPrice} brand = {this.props.brand}/> : null}
+                {this.state.modal ? <Modal product={this.props.product} handleClick={this.handleClick} image = {this.props.image} name = {this.props.name} showPrice = {this.props.showPrice} brand = {this.props.brand}/> : null}
             </>
         )
     }
