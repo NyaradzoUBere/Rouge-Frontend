@@ -21,6 +21,8 @@ Rouge is a fun, lighthearted webapp that allows users to pic their makeup looks 
 [Rouge Walkthrough](Insert Here)
 
 ## Technologies
+React.js - Version 16.13.1
+
 JavaScript ES6
 
 HTML5 / CSS3
