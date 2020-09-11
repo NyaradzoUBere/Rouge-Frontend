@@ -173,6 +173,7 @@ button:hover {
   background-color: white;
   color: rgba(189, 99, 119, 0.657);
   font-weight: bold;
+  cursor: pointer;
 }
 
 .looks-list {

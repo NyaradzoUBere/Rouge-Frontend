@@ -61,16 +61,23 @@ class App extends React.Component {
 
   showProducts = () => {
     return this.state.products.map(product => {
-      return <Card product = {product} addToLooks = {this.addToLooks}/>
+      return <Card product = {product} clickLooks = {this.addToLooks}/>
     })
   }
 
-  showLooks = () => this.state.looks.map(product => <Card key = {product.id} product={product}/>)
+  showLooks = () => this.state.looks.map(product => <Card key = {product.id} product={product} clickLooks = {this.removeFromLooks}/>)
 
   addToLooks = (product) => {
-    this.setState({
-      looks: [...this.state.looks, product]
-    })
+    if (!this.state.looks.includes(product)) {
+      this.setState({
+        looks: [...this.state.looks, product]
+      })
+    }
+  }
+
+  removeFromLooks = (product) => {
+    let looks = this.state.looks.filter(look => look !== product)
+    this.setState({looks})
   }
 
   showLightProducts = () => {

@@ -12,7 +12,7 @@ export default class Card extends React.Component {
     }
 
     handleLooksClick = () => {
-        this.props.addToLooks(this.props.product)
+        this.props.clickLooks(this.props.product)
         // console.log(this.props.product)
     }
 
