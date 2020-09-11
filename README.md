@@ -35,27 +35,22 @@ HTML5 / CSS3
 ## Code Examples
 
 ```
-function persistExpense(user) {
-    user.expenses.forEach(expense => {
-        const divExpenses = document.getElementById("expense-list")
-        const expenseListElement = document.createElement("p")
-        expenseListElement.innerText = `${expense.item}: $ ${expense.amount}`
-        divExpenses.append(expenseListElement)
-        data = [{
-            x: `${expense.item}, value: ${expense.amount}`
-        }]
-    })
-}
+  lightOrDark = () => {
+    if (this.state.lightProducts) {
+      return this.showLightProducts()
+    } else if (this.state.darkProducts) {
+      return this.showDarkProducts()
+    } else {
+      return this.showProducts()
+    }
+  }
 ```
 ```
-function sumExpenses(user){
-    expense_array = []
-    user.expenses.map(expense => {
-        (expense_array.push(expense.amount))
+  showProducts = () => {
+    return this.state.products.map(product => {
+      return <Card product = {product} clickLooks = {this.addToLooks}/>
     })
-    expenseSum = expense_array.reduce((total, amount) => total + amount);
-    showTotalExpenses()
-}
+  }
 ```
 ## Rouge Features
 * Input and track expenses
