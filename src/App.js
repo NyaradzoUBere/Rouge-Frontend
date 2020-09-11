@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from './components/Card'
 import Banner from './components/Banner'
+import LookCard from './components/LookCard'
 import './App.css';
 
 const baseUrl = "http://localhost:3000"
@@ -65,7 +66,7 @@ class App extends React.Component {
     })
   }
 
-  showLooks = () => this.state.looks.map(product => <Card key = {product.id} product={product} clickLooks = {this.removeFromLooks}/>)
+  showLooks = () => this.state.looks.map(product => <LookCard key = {product.id} product={product} clickLooks = {this.removeFromLooks}/>)
 
   addToLooks = (product) => {
     if (!this.state.looks.includes(product)) {
