@@ -122,8 +122,8 @@ class App extends React.Component {
       <div className="App">
         <Banner />
         <div className = "button">
-          <button className = "day-night-button" onClick = {this.lightColors}>Day</button>
-          <button className = "day-night-button"  onClick = {this.darkColors}>Night</button>
+          <button className = "day-night-button" onClick = {this.lightColors}>Day·Time</button>
+          <button className = "day-night-button"  onClick = {this.darkColors}>Night·Time</button>
         </div>
         <ul className = "product-list">
           {this.lightOrDark()}
