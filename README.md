@@ -29,9 +29,8 @@ HTML5 / CSS3
 
 ## Setup
 
-1. To run this project, please go to the [Rouge Backend repo](https://github.com/NyaradzoUBere/Rouge-WebApp-Backend)
-1. Run ~ lite-server in your front-end directory
-1. [Click here!](http://localhost:3001)
+1. To run this project, please go to the [Rouge Backend repo](https://github.com/NyaradzoUBere/Rouge-Backend) and follow setup instructions
+2. Run ~ npm start in your front-end directory
 
 ## Code Examples
 
