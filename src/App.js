@@ -29,7 +29,7 @@ class App extends React.Component {
 
   showProducts = () => {
     return this.state.products.map(product => {
-      return <Card image= {product.image_link} brand = {product.brand} name = {product.name} description = {product.description} showPrice = {this.showPrice} price = {product.price} product = {product} addToLooks = {this.addToLooks}/>
+      return <Card product = {product} addToLooks = {this.addToLooks}/>
     })
   }
 
@@ -44,14 +44,14 @@ class App extends React.Component {
   showLightProducts = () => {
     return this.state.products.map(product => {
         if (product.hasLight) {
-          return <Card image= {product.image_link} brand = {product.brand} name = {product.name} description = {product.description} showPrice = {this.showPrice} price = {product.price} showLooks = {this.showLooks}/>
+          return <Card product = {product} addToLooks = {this.addToLooks}/>
         }
       })
   }
   showDarkProducts = () => {
     return this.state.products.map(product => {
         if (product.hasDark) {
-          return <Card image= {product.image_link} brand = {product.brand} name = {product.name} description = {product.description} showPrice = {this.showPrice} price = {product.price} showLooks = {this.showLooks}/>
+          return <Card product = {product} addToLooks = {this.addToLooks}/>
         }
       })
   }
